@@ -23,7 +23,7 @@ func (s *BoardService) GetOfficer(ctx context.Context, uuid interface{}) (models
 }
 
 func (s *BoardService) CreateOfficer(ctx context.Context, params models.CreateOfficerParams) error {
-	officer, err := s.q.CreateOfficer(ctx, params)
+	err := s.q.CreateOfficer(ctx, params)
 	if err != nil {
 		return err
 	}
@@ -39,7 +39,7 @@ func (s *BoardService) GetTier(ctx context.Context, tierName int64) (models.Tier
 }
 
 func (s *BoardService) CreateTier(ctx context.Context, params models.CreateTierParams) error {
-	tier, err := s.q.CreateTier(ctx, params)
+	err := s.q.CreateTier(ctx, params)
 	if err != nil {
 		return err
 	}
@@ -55,7 +55,7 @@ func (s *BoardService) GetPosition(ctx context.Context, fullName string) (models
 }
 
 func (s *BoardService) CreatePosition(ctx context.Context, params models.CreatePositionParams) error {
-	position, err := s.q.CreatePosition(ctx, params)
+	err := s.q.CreatePosition(ctx, params)
 	if err != nil {
 		return err
 	}
